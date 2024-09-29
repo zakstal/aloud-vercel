@@ -1,0 +1,68 @@
+/* depreicated */
+.script-editor { 
+    background-color: hsl(var(--editor-background));  
+    /* background-color: var(--editor-background);   */
+    color: hsl(var(--editor-text));
+}
+
+.script-editor .dialogue-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0     
+}
+
+.script-editor p {
+    padding: 0;
+    min-height: 28px; /* line height */
+    /* color: hsl(var(--editor-text)); */
+}
+
+.script-editor h3 {
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
+.script-editor h2 {
+    text-align: right;
+}
+
+.script-editor h2 h3 h4 h5 h6 {
+    color: hsl(var(--editor-text-dark)); 
+}
+
+
+/* depreicated */
+.script-editor .dialogue-container p {
+    text-align: left;
+    /* padding: 15px 0; */
+    max-width: 385px;
+}
+
+.script-editor .character {
+    text-align: center;
+    padding-top: 15px;
+    min-height: 44px;
+}
+
+.script-editor .dialogue {
+    text-align: left;
+    /* padding: 15px 0; */
+    max-width: 385px;
+    padding-left: 116px;
+    padding-bottom: 16px;
+    box-sizing: content-box;
+}
+
+.script-editor-line-container {
+   display: flex; 
+   
+}
+
+.script-editor-line-container-number {
+    /* align-self: center; */
+    position: relative;
+    left: -90px;
+   
+}

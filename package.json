@@ -1,0 +1,44 @@
+{
+  "name": "v1",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*", "tooling/*"],
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "dev": "turbo dev --parallel",
+    "dev:web": "turbo dev --filter=@v1/web",
+    "dev:jobs": "turbo jobs --filter=@v1/jobs",
+    "dev:app": "turbo dev --filter=@v1/app",
+    "start:web": "turbo start --filter=@v1/web",
+    "start:app": "turbo start --filter=@v1/app",
+    "test": "turbo test --parallel",
+    "format": "biome format --write .",
+    "lint": "turbo lint && bun lint:repo",
+    "lint:repo": "bunx sherif@latest",
+    "lint:repo:fix": "bunx sherif@latest --fix",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@t3-oss/env-nextjs": "^0.11.1",
+    "turbo": "2.1.1",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "bun@1.1.26",
+  "dependencies": {
+    "@auth/supabase-adapter": "^1.4.2",
+    "@next/font": "^14.2.12",
+    "@preact/signals-react": "^2.2.0",
+    "@radix-ui/react-slider": "^1.2.0",
+    "@radix-ui/react-switch": "^1.1.0",
+    "@supabase/supabase-js": "^2.45.4",
+    "dexie": "^4.0.8",
+    "dexie-react-hooks": "^1.1.7",
+    "pdf2json": "^3.1.4",
+    "pdfjs-dist": "^4.6.82",
+    "raf": "^3.4.1",
+    "react-filepond": "^7.1.2",
+    "react-howler": "^5.2.0"
+  }
+}
